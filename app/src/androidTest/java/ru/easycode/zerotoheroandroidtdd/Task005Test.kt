@@ -31,7 +31,7 @@ class Task005Test {
             allOf(
                 isAssignableFrom(TextView::class.java),
                 withId(R.id.titleTextView),
-                withText("I am an Android Developer!"),
+                withText("I'm an android dev"),
                 withParent(isAssignableFrom(LinearLayout::class.java)),
                 withParent(withId(R.id.rootLayout))
             )
@@ -39,9 +39,9 @@ class Task005Test {
 
         onView(
             allOf(
+                isAssignableFrom(Button::class.java),
                 withId(R.id.changeButton),
                 withText("change"),
-                isAssignableFrom(Button::class.java),
                 withParent(isAssignableFrom(LinearLayout::class.java)),
                 withParent(withId(R.id.rootLayout))
             )
